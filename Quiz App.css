@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+  width: 400px;
+  animation: fadeIn 1s ease;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  width: 90%;
+}
+
+button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 15px;
+  font-weight: 550;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.final-box {
+  animation: fadeIn 1s ease;
+}
+
+.final-box button {
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#feedback {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  animation: pulse 0.3s ease;
+}
+
+.correct {
+  color: lightgreen;
+  animation: correctAnim 0.5s ease;
+}
+
+.wrong {
+  color: salmon;
+  animation: wrongAnim 0.5s ease;
+}
+
+@keyframes correctAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wrongAnim {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.score-text span, .high-score-text span {
+  font-weight: bold;
+}
+
+.time-bar {
+  width: 100%;
+  background: rgba(255,255,255,0.2);
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.time-fill {
+  height: 100%;
+  width: 100%;
+  background: #00ffcc;
+  transition: width 1s linear;
+}

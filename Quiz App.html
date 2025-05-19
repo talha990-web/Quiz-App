@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="Quiz App.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Multiplication Quiz</h1>
+
+    <div class="quiz-box hidden">
+      <div id="question" class="question"></div>
+
+      <div class="time-bar">
+        <div class="time-fill" id="timeFill"></div>
+      </div>
+
+      <input type="number" id="answer" placeholder="Enter your answer" />
+      <button onclick="checkAnswer()">Submit</button>
+
+      <p id="feedback"></p>
+
+      <p class="score-text">Score : <span id="score"> 0 </span></p>
+      <p class="high-score-text">High Score : <span id="highScore"> 0 </span></p>
+    </div>
+
+    <div class="final-box hidden">
+      <h2>Quiz Completed !</h2>
+      <p>Your Score : <span id="finalScore"></span></p>
+      <p>High Score : <span id="finalHighScore"></span></p>
+      <button onclick="restartQuiz()">Play Again</button>
+    </div>
+
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <script src="Quiz App.js"></script>
+</body>
+</html>
